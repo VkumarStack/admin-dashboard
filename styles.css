@@ -61,7 +61,7 @@ body {
 
     display : grid;
     grid-template-columns: min-content auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
 }
 
 .nav-bar {
@@ -110,12 +110,17 @@ body {
     color: white;
 }
 
+.main-content {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
 .header {
     padding: 20px 30px;
     display : flex;
     flex-direction: column;
     gap: 10px;
-    grid-column: 2 / -1;
 
     font-family: Roboto;
 }
@@ -201,4 +206,96 @@ body {
     width: 120px;
 
     margin: 10px;
+}
+
+.main-body {
+    background-color: #d4d4d4;
+    box-shadow: inset 0 10px 10px -7px rgba(119, 115, 115, 0.7);
+    
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+
+    font-family: Roboto;
+    font-size: 13px;   
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.projects>p {
+    font-size: 20px;
+}
+
+.projects-container {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-rows: repeat(auto-fit, 150px);
+
+}
+
+.projects-container>div {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid #0d9488;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: clamp(200px, 100%, 400px);
+}
+
+.side-container>div>p{
+    font-size: 20px;
+}
+
+.affiliations-pair-container, .quick-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.affiliations, .quick-info-pairs {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 7px 5px 0px rgba(119, 115, 115, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.affiliations>div, .quick-info-pairs>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(119, 115, 115, 0.7);
+}
+
+.affiliations>div:last-child, .quick-info-pairs>div:last-child {
+    border: none;
+}
+
+.side-container h2 {
+    font-size: 20px;
+    font-weight: bold;
 }
